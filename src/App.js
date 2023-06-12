@@ -21,7 +21,7 @@ function App() {
               setCity("")} )
       }
   }
-
+  
     return (
       <div className="flex flex-col items-center mt-[5px] bg-[#06283D]">
           <div className='w-[400px] bg-white flex items-center flex-col rounded'>
@@ -54,6 +54,7 @@ function App() {
                         src={imgCloud} />)
                     }
                     <p className='font-medium mt-[5px] text-center text-2xl'>{weatherData.name}</p>
+                    <p className='font-medium mt-[5px] text-center text-2xl'>{new Date().toLocaleTimeString({timeZone: weatherData.timezone})}</p>
                     <p className='font-medium mt-[5px] text-center text-2xl'>{weatherData.main.temp} °F</p>
                     <p className='font-medium mt-[5px] text-center text-2xl'>{weatherData.weather[0].main}</p>
                 </div>
